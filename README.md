@@ -17,10 +17,18 @@ On Windows, I'm using [Chocolatey](https://chocolatey.org/)
 ```bash
 choco install php
 ```
-[wip]
+```bash
+choco install composer
+```
 
 ## Usage
 Open a terminal on the folder where is the code and type:
+```bash
+composer install
+```
+```bash
+vendor\bin\doctrine-migrations migrations:migrate
+```
 [wip]
 
 ## License
