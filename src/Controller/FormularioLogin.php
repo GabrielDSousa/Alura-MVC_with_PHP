@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Alura\Cursos\Controller;
 
 

@@ -5,6 +5,7 @@ namespace Alura\Cursos\Controller;
 use Alura\Cursos\Entity\Curso;
 use Alura\Cursos\Infra\EntityManagerCreator;
 
+
 class Exclusao implements InterfaceControladorRequisicao
 {
     /**
@@ -27,6 +28,8 @@ class Exclusao implements InterfaceControladorRequisicao
         );
 
         if (is_null($id) || $id === false) {
+            $_SESSION['tipo_mensagem'] = 'danger';
+            $_SESSION['mensagem'] = "Curso inexistente";
             header('Location: /listar-cursos');
             return;
         }
