@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Alura\Cursos\Controller;
 
 use Alura\Cursos\Entity\Curso;
@@ -10,8 +11,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-
-class ListarCursos extends ControllerComHtml implements RequestHandlerInterface
+class CursosEmJson implements RequestHandlerInterface
 {
     /**
      * @var EntityRepository
@@ -26,11 +26,11 @@ class ListarCursos extends ControllerComHtml implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $html = $this->renderizaHtml('cursos/listar-cursos.php', [
-            'cursos' => $this->repositorioDeCursos->findAll(),
-            'titulo' => 'Lista de cursos',
-        ]);
-
-        return new Response(200, [], $html);
+        $cursos = $this->repositorioDeCursos->findAll();
+        return new Response(
+            200,
+            ['Content-Type' => 'application/json'],
+            json_encode($cursos)
+        );
     }
 }

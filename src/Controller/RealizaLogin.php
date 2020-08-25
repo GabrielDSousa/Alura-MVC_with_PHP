@@ -4,6 +4,7 @@ namespace Alura\Cursos\Controller;
 
 use Alura\Cursos\Entity\Usuario;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -12,7 +13,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 class RealizaLogin implements RequestHandlerInterface
 {
     /**
-     * @var \Doctrine\Common\Persistence\ObjectRepository
+     * @var EntityRepository
      */
     private $repositorioDeUsuarios;
 

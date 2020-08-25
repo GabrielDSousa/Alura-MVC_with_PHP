@@ -17,10 +17,6 @@ class Persistencia implements RequestHandlerInterface
      */
     private EntityManagerInterface $entityManager;
 
-    /**
-     * @var \Doctrine\ORM\EntityManagerInterface
-     */
-
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;

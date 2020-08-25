@@ -29,8 +29,24 @@ composer install
 ```bash
 vendor\bin\doctrine-migrations migrations:migrate
 ```
-[wip]
+```bash
+vendor\bin\doctrine orm:generate-proxies
+```
+```bash
+php -S localhost:8080
+```
+
+Access the pages
+
+[localhost:8080/login](localhost:8080/login)
+
+[localhost:8080/listar-cursos](localhost:8080/listar-cursos)
+
+[localhost:8080/buscarCursosEmJson](localhost:8080/buscarCursosEmJson)
+
+[localhost:8080/buscarCursosEmXml](localhost:8080/buscarCursosEmXml)
+
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/GabrielDSousa/MVC_with_PHP/blob/master/LICENSE.md)
 
