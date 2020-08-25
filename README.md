@@ -1,4 +1,4 @@
-# PHP_Doctrine
+# MVC wuth PHP
 [Understand the Model-View-Controller pattern](https://cursos.alura.com.br/course/php-model-view-controller)
 
 This a trainning provided by [Alura](https://cursos.alura.com.br)
