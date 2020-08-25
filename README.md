@@ -38,13 +38,13 @@ php -S localhost:8080
 
 Access the pages
 
-[localhost:8080/login](localhost:8080/login)
+localhost:8080/login
 
-[localhost:8080/listar-cursos](localhost:8080/listar-cursos)
+localhost:8080/listar-cursos
 
-[localhost:8080/buscarCursosEmJson](localhost:8080/buscarCursosEmJson)
+localhost:8080/buscarCursosEmJson
 
-[localhost:8080/buscarCursosEmXml](localhost:8080/buscarCursosEmXml)
+localhost:8080/buscarCursosEmXml
 
 
 ## License
