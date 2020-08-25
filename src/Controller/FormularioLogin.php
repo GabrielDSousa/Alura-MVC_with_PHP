@@ -3,13 +3,19 @@
 namespace Alura\Cursos\Controller;
 
 
-class FormularioLogin extends ControllerComHtml implements InterfaceControladorRequisicao
-{
+use Nyholm\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-    public function processaRequisicao(): void
+class FormularioLogin extends ControllerComHtml implements RequestHandlerInterface
+{
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        echo $this->renderizaHtml('login/formulario.php', [
+        $html = $this->renderizaHtml('login/formulario.php', [
             'titulo' => 'Login'
         ]);
+
+        return new Response(200, [], $html);
     }
 }
