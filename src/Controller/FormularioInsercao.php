@@ -9,11 +9,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class FormularioInsercao extends ControllerComHtml implements RequestHandlerInterface
 {
-    public function processaRequisicao(): void
-    {
-
-    }
-
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $html = $this->renderizaHtml('cursos/formulario.php', [
