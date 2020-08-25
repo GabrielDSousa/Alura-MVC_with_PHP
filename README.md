@@ -27,9 +27,6 @@ Open a terminal on the folder where is the code and type:
 composer install
 ```
 ```bash
-vendor\bin\doctrine-migrations migrations:migrate
-```
-```bash
 vendor\bin\doctrine orm:generate-proxies
 ```
 ```bash
